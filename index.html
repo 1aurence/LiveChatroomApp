@@ -36,8 +36,8 @@
       <small v-if="typing" class="text-white">{{typing}} is typing</small>
       <li v-for="message in messages"class="list-group-item">
         <span :class="{'float-left':message.type === 1}">
+          <span id="person">:{{message.by}}</span>
           {{message.message}}
-          <span>:{{message.by}}</span>
 
         </span>
 
@@ -131,5 +131,17 @@
 
       })
     </script>
+  
+    <style>
+        ul {
+      height: 500px;
+      overflow: scroll
+      
+    }
+    #person {
+      text-decoration: underline;
+    }
+   
+    </style>
   </body>
 </html>
